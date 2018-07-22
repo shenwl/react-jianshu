@@ -104,7 +104,7 @@ export const Addition = styled.div`
 export const SearchInfo = styled.div`
   position: absolute;
   top: 57px;
-  left: 0;
+  left: 20px;
   width: 240px;
   min-height: 100px;
   padding: 0 20px;
@@ -116,7 +116,7 @@ export const SearchInfo = styled.div`
     height: 14px;
     position: absolute;
     content: "";
-    left: 35px;
+    left: 15px;
     top: -7px;
     transform: rotate(45deg);
     background-color: #fff;
