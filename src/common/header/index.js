@@ -6,10 +6,39 @@ import {  HeaderWrapper,
           NavSearch, 
           Addition,
           Button,
-          SearchWrapper } from './style'
+          SearchWrapper,
+          SearchInfo,
+          SearchInfoTitle,
+          SearchInfoSwitch,
+          SearchInfoItem,
+          SearchInfoList } from './style'
 import { CSSTransition } from 'react-transition-group'
 import { connect } from 'react-redux'
 import { actionCreators } from './store'
+
+const getListArea = (show) => {
+  if(show) {
+    return (
+    <SearchInfo >
+      <SearchInfoTitle>
+        热门搜索
+        <SearchInfoSwitch>换一批</SearchInfoSwitch>
+      </SearchInfoTitle>
+      <SearchInfoList>
+        <SearchInfoItem>教育</SearchInfoItem>
+        <SearchInfoItem>科学</SearchInfoItem>
+        <SearchInfoItem>教育</SearchInfoItem>
+        <SearchInfoItem>科学</SearchInfoItem>
+        <SearchInfoItem>教育</SearchInfoItem>
+        <SearchInfoItem>科学</SearchInfoItem>
+        <SearchInfoItem>教育</SearchInfoItem>
+        <SearchInfoItem>科学</SearchInfoItem>
+      </SearchInfoList>
+    </SearchInfo>)
+  }else {
+    return null 
+  }
+}
 
 const Header = (props) => {
   return (
@@ -24,17 +53,18 @@ const Header = (props) => {
         </NavItem>
         <SearchWrapper>
           <CSSTransition
-              timeout={200}
-              in={props.focused}
-              classNames="slide"
-            >
-              <NavSearch
-                onFocus={props.handleInputFocus}
-                onBlur={props.handleInputBlur}
-                className={props.focused ? 'focused' : ''}
-              ></NavSearch>
-            </CSSTransition>
-            <i className={props.focused ? 'focused iconfont' : 'iconfont'}>&#xe600;</i>
+            timeout={200}
+            in={props.focused}
+            classNames="slide"
+          >
+            <NavSearch
+              onFocus={props.handleInputFocus}
+              onBlur={props.handleInputBlur}
+              className={props.focused ? 'focused' : ''}
+            ></NavSearch>
+          </CSSTransition>
+          <i className={props.focused ? 'focused iconfont' : 'iconfont'}>&#xe600;</i>
+          {getListArea(props.focused)}
         </SearchWrapper>
       </Nav>
       <Addition>
