@@ -18,8 +18,8 @@ import { actionCreators } from './store'
 
 
 class Header extends Component {
-  getListArea(show) {
-    if(show) {
+  getListArea() {
+    if(this.props.focused) {
       return (
       <SearchInfo >
         <SearchInfoTitle>
@@ -61,7 +61,7 @@ class Header extends Component {
               ></NavSearch>
             </CSSTransition>
             <i className={this.props.focused ? 'focused iconfont' : 'iconfont'}>&#xe600;</i>
-            {this.getListArea(this.props.focused)}
+            {this.getListArea()}
           </SearchWrapper>
         </Nav>
         <Addition>
