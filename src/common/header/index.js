@@ -18,10 +18,6 @@ import { actionCreators } from './store'
 
 
 class Header extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   getListArea(show) {
     if(show) {
       return (
@@ -93,6 +89,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     handleInputFocus() {
+      dispatch(actionCreators.geSearchList())
       dispatch(actionCreators.searchFocus())
     },
     handleInputBlur() {
