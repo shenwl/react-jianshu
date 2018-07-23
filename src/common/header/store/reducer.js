@@ -3,7 +3,8 @@ import { fromJS } from 'immutable'
 
 
 const defaultState = fromJS({
-  focused: false
+  focused: false,
+  searchList: [],
 })
 
 export default (state = defaultState, action) => {
