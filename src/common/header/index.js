@@ -28,7 +28,7 @@ class Header extends Component {
         <SearchInfoItem key={jsList[i]}>{jsList[i]}</SearchInfoItem>
       )
     }
-    if(mouseIn) {
+    if(focused || mouseIn) {
       return (
       <SearchInfo 
         onMouseEnter={handleMouseEnter}
@@ -100,7 +100,6 @@ const mapDispatchToProps = (dispatch) => {
     handleInputFocus() {
       dispatch(actionCreators.geSearchList())
       dispatch(actionCreators.searchFocus())
-      dispatch(actionCreators.mouseEnter()) 
     },
     handleInputBlur() {
       dispatch(actionCreators.searchBlur())  
