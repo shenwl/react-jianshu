@@ -16,7 +16,12 @@ def allow_cross_domain(fun):
 @app.route('/api/list')
 @allow_cross_domain
 def get_todo_list():
-    return make_response(jsonify(["item1", "item2", "item3", "item1", "item2", "item3"]))
+    ret = {
+        "result": 1, 
+        "msg": "获取成功",
+        "data": ["科技", "前端", "区块链", "生活大爆炸", "美剧", "英语"]
+    }
+    return make_response(jsonify(ret))
 
 
 if __name__ == "__main__":
