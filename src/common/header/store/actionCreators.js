@@ -12,29 +12,36 @@ const changeList = (list, totalPage) => {
 
 export const searchFocus = () => {
   return {
-    type: actionTypes.SEARCH_INPUT_FOCUS
+    type: actionTypes.SEARCH_INPUT_FOCUS,
   }
 }
 
 export const searchBlur = () => {
   return {
-    type: actionTypes.SEARCH_INPUT_BLUR
+    type: actionTypes.SEARCH_INPUT_BLUR,
   }
 }
 
 export const mouseEnter = () => {
   return {
-    type: actionTypes.MOUSE_ENTER
+    type: actionTypes.MOUSE_ENTER,
   }
 }
 
 export const mouseLeaeve = () => {
   return {
-    type: actionTypes.MOUSE_LEAVE
+    type: actionTypes.MOUSE_LEAVE,
   }
 }
 
-export const geSearchList = () => {
+export const changePage = (page) => {
+  return {
+    type: actionTypes.CHANGE_PAGE,
+    page: page,
+  }
+}
+
+export const getSearchList = () => {
   return (dispatch) => {
     axios.get('http://0.0.0.0:3001/api/list').then(res => {
       const data = res.data
