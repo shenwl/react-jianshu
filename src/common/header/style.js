@@ -134,6 +134,7 @@ export const SearchInfoTitle = styled.div`
 export const SearchInfoSwitch = styled.span`
   float: right;
   font-size: 13px;
+  cursor: pointer;
 `
 
 export const SearchInfoList = styled.div`
@@ -155,6 +156,7 @@ export const SearchInfoItem = styled.a`
   border: 1px solid #ddd;
   color: #787878;
   border-radius: 2px;
+  cursor: pointer;
 `
 
 export const Button = styled.div`
