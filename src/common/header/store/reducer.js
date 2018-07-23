@@ -8,14 +8,14 @@ const defaultState = fromJS({
 })
 
 export default (state = defaultState, action) => {
-  if(action.type === actionTypes.SEARCH_INPUT_FOCUS) {
-    return state.set('focused', true)
+  switch(action.type) {
+    case actionTypes.SEARCH_INPUT_FOCUS:
+      return state.set('focused', true)
+    case actionTypes.SEARCH_INPUT_BLUR:
+      return state.set('focused', false)
+    case actionTypes.CHANGE_LIST:
+      return state.set('list', action.list)
+    default:
+      return state
   }
-  if(action.type === actionTypes.SEARCH_INPUT_BLUR) {
-    return state.set('focused', false)
-  }
-  if(action.type === actionTypes.CHANGE_LIST) {
-    return state.set('list', action.list)
-  }
-  return state
 }
