@@ -19,7 +19,8 @@ import { actionCreators } from './store'
 
 class Header extends Component {
   getListArea() {
-    if(this.props.focused) {
+    const { focused, list } = this.props
+    if(focused) {
       return (
       <SearchInfo >
         <SearchInfoTitle>
@@ -27,7 +28,7 @@ class Header extends Component {
           <SearchInfoSwitch>换一批</SearchInfoSwitch>
         </SearchInfoTitle>
         <SearchInfoList>
-          {this.props.list.map((item, index) => {
+          {list.map((item, index) => {
             return <SearchInfoItem key={item}>{item}</SearchInfoItem>
           })}
         </SearchInfoList>
