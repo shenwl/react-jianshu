@@ -12,7 +12,7 @@ class Topic extends Component {
           topicList.map((topic, index) => {
             return (
               <TopicItem key={topic.get('id')}>
-                <img className="topic-name-img" src={topic.get('imgUrl')} />
+                <img className="topic-name-img" src={topic.get('imgUrl')} alt=''/>
                 {topic.get('title')}
               </TopicItem>
             )
