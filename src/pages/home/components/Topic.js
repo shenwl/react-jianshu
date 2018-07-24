@@ -1,34 +1,38 @@
 import React, { Component } from 'react'
 import { TopicWrapper, TopicItem } from '../style'
+import { connect } from 'react-redux'
 
 
 class Topic extends Component {
   render() {
+    const { topicList } = this.props
+    console.log(topicList)
     return (
       <TopicWrapper>
-        <TopicItem>
-          <img className="topic-name-img" src="//upload.jianshu.io/collections/images/75/22.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64" />
-          科技美学
-        </TopicItem>
-        <TopicItem>
-          <img className="topic-name-img" src="//upload.jianshu.io/collections/images/75/22.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64" />
-          生活大爆炸
-        </TopicItem>
-        <TopicItem>
-          <img className="topic-name-img" src="//upload.jianshu.io/collections/images/75/22.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64" />
-          动漫
-        </TopicItem>
-        <TopicItem>
-          <img className="topic-name-img" src="//upload.jianshu.io/collections/images/75/22.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64" />
-          前端
-        </TopicItem>
-        <TopicItem>
-          <img className="topic-name-img" src="//upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64" />
-          社会热点
-        </TopicItem>
+        {
+          topicList.map((topic, index) => {
+            return (
+              <TopicItem key={topic.get('id')}>
+                <img className="topic-name-img" src={topic.get('imgUrl')} />
+                {topic.get('title')}
+              </TopicItem>
+            )
+          })
+        }
       </TopicWrapper>
     )
   }
 }
 
-export default Topic
+const mapStateToProps = (state) => {
+  return {
+    topicList: state.getIn(['home', 'topicList']),
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Topic)
