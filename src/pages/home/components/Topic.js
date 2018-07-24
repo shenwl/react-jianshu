@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 class Topic extends Component {
   render() {
     const { topicList } = this.props
-    console.log(topicList)
     return (
       <TopicWrapper>
         {
