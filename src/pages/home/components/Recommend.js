@@ -12,9 +12,7 @@ class Recommend extends Component {
       <RecommendWrapper>
         {
           recommendList.map(recommend => (
-            <RecommendItem key={recommend.get('id')}>
-              <img className="recommend-pic" src={recommend.get('imgUrl')} alt=""/>
-            </RecommendItem>
+            <RecommendItem key={recommend.get('id')} imgUrl={recommend.get('imgUrl')}/>
           ))
         }
       </RecommendWrapper>

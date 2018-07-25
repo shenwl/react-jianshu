@@ -88,7 +88,16 @@ export const RecommendWrapper = styled.div`
 `
 export const RecommendItem = styled.div`
   margin-bottom: 5px;
-  .recommend-pic {
+  width: 280px;
+  height: 50px;
+  background: url(${(props) => props.imgUrl});
+  background-size: contain;
+`
+export const WriterWrapper = styled.div`
+  margin-top: 45px;
+`
+export const WriterItem = styled.div`
+  .writer-pic {
     width: 100%;
   }
 `
