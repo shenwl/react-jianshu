@@ -106,3 +106,14 @@ export const WriterItem = styled.div`
     width: 100%;
   }
 `
+export const LoadMore = styled.div`
+  margin: 30px 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #a5a5a5;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+`
