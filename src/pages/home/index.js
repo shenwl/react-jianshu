@@ -36,7 +36,6 @@ class Home extends Component {
         articleList: result.articleList,
         recommendList: result.recommendList,
       }
-      console.log(result)
       this.props.dispatchAction(action)
     })
   }
