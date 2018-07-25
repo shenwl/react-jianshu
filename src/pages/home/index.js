@@ -28,16 +28,7 @@ class Home extends Component {
     )
   }
   componentDidMount() {
-    axios.get('http://0.0.0.0:3001/api/home').then(res => {
-      const result = res.data.data
-      const action = {
-        type: actionTypes.CHANGE_HOME_DATA,
-        topicList: result.topicList,
-        articleList: result.articleList,
-        recommendList: result.recommendList,
-      }
-      this.props.dispatchAction(action)
-    })
+    this.props.changeHomeData()
   }
 }
 
@@ -47,8 +38,17 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    dispatchAction(action) {
+    changeHomeData() {
+      axios.get('http://0.0.0.0:3001/api/home').then(res => {
+      const result = res.data.data
+      const action = {
+        type: actionTypes.CHANGE_HOME_DATA,
+        topicList: result.topicList,
+        articleList: result.articleList,
+        recommendList: result.recommendList,
+      }
       dispatch(action)
+    })
     },
   }
 }
