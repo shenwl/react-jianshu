@@ -27,17 +27,25 @@ class Home extends Component {
           <Recommend></Recommend>
           <Writer></Writer>
         </HomeRight>
-        <GoTop onClick={this.handleScrollTop}>^</GoTop>
+        { 
+          this.props.showGoTop ? <GoTop onClick={this.handleScrollTop}>^</GoTop> : ''
+        }
       </HomeWrapper>
     )
   }
   componentDidMount() {
     this.props.changeHomeData()
+    this.bindEvents()
+  }
+  bindEvents() {
+    window.addEventListener('scroll', this.props.changeGoTopShow)
   }
 }
 
 const mapStateToProps = (state) => {
-  return {}
+  return {
+    showGoTop: state.getIn(['home', 'showGoTop']),
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -45,6 +53,13 @@ const mapDispatchToProps = (dispatch) => {
     changeHomeData() {
       const action = actionCreators.getHomeData()
       dispatch(action)
+    },
+    changeGoTopShow(e) {
+      if(document.documentElement.scrollTop > 400) {
+        dispatch(actionCreators.toggleGoTopShow(true))
+      }else {
+        dispatch(actionCreators.toggleGoTopShow(false))
+      }
     },
   }
 }

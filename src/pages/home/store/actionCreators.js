@@ -37,3 +37,9 @@ export const getMoreArticleList = (articlePage) => {
     })
   }
 }
+export const toggleGoTopShow = (show) => {
+  return {
+    type: actionTypes.TOGGLE_GOTOP_SHOW,
+    show: show,
+  }
+}

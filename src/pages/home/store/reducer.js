@@ -7,6 +7,7 @@ const defaultState = fromJS({
   articleList: [],
   recommendList: [],
   articlePage: 1,
+  showGoTop: false,
 })
 
 export default (state = defaultState, action) => {
@@ -22,6 +23,8 @@ export default (state = defaultState, action) => {
         articleList: state.get('articleList').concat(action.list),
         articlePage: action.nextPage,
       })
+    case actionTypes.TOGGLE_GOTOP_SHOW:
+      return state.set('showGoTop', action.show)
     default:
       return state
   }
