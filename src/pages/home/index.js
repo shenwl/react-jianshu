@@ -37,6 +37,9 @@ class Home extends Component {
     this.props.changeHomeData()
     this.bindEvents()
   }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.props.changeGoTopShow)
+  }
   bindEvents() {
     window.addEventListener('scroll', this.props.changeGoTopShow)
   }
