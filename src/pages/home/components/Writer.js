@@ -1,14 +1,28 @@
 import React, { Component } from 'react'
+import { WriterWrapper } from '../style'
+import { connect } from 'react-redux'
 
 
 class Writer extends Component {
   render() {
     return (
-      <div>
+      <WriterWrapper>
         Writer
-      </div>
+      </WriterWrapper>
     )
   }
 }
 
-export default Writer
+const mapStateToProps = (state, ownProps) => {
+  return {
+    prop: state.prop
+  }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Writer)

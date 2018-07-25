@@ -95,6 +95,11 @@ export const RecommendItem = styled.div`
 `
 export const WriterWrapper = styled.div`
   margin-top: 45px;
+  width: 278px;
+  border: 1px solid #dcdcdc;
+  border-radius: 3px;
+  height: 300px;
+  text-align: center;
 `
 export const WriterItem = styled.div`
   .writer-pic {
