@@ -83,11 +83,11 @@ export const RecommendWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: space-between;
   width: 280px;
-  height: 270px;
+  height: 275px;
 `
 export const RecommendItem = styled.div`
-  margin-bottom: 5px;
   width: 280px;
   height: 50px;
   background: url(${(props) => props.imgUrl});
