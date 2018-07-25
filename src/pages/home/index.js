@@ -7,9 +7,8 @@ import {
   HomeWrapper,
   HomeLeft, 
   HomeRight } from './style'
-import axios from 'axios'
 import { connect } from 'react-redux'
-import { actionTypes } from './store'
+import { actionCreators } from './store'
 
 class Home extends Component {
   render() {
@@ -39,16 +38,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     changeHomeData() {
-      axios.get('http://0.0.0.0:3001/api/home').then(res => {
-      const result = res.data.data
-      const action = {
-        type: actionTypes.CHANGE_HOME_DATA,
-        topicList: result.topicList,
-        articleList: result.articleList,
-        recommendList: result.recommendList,
-      }
+      const action = actionCreators.getHomeData()
       dispatch(action)
-    })
     },
   }
 }
