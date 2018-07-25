@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, make_response
 from functools import wraps
 import json
+import shortuuid
 
 app = Flask(__name__)
 
@@ -32,6 +33,17 @@ def get_home_data():
         "result": 1, 
         "msg": "获取成功",
         "data": json.loads(json_data),
+    }
+    return make_response(jsonify(ret))
+
+@app.route('/api/articlelist')
+@allow_cross_domain
+def get_article_list():
+    data = [{"id":shortuuid.uuid(),"title":"玩转职场，你还差一个项目管理思维","summary":"PMI（美国项目管理协会）发布的第10次薪酬调查报告显示，PMP（项目管理专业人士）证书是影响项目管理专业人士薪酬位数的重要原因。持有PMP证书...","imgUrl":"//upload-images.jianshu.io/upload_images/3052965-f8cfc95f95487cc0.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"},{"id":shortuuid.uuid(),"title":"玩转职场，你还差一个项目管理思维","summary":"PMI（美国项目管理协会）发布的第10次薪酬调查报告显示，PMP（项目管理专业人士）证书是影响项目管理专业人士薪酬位数的重要原因。持有PMP证书...","imgUrl":"//upload-images.jianshu.io/upload_images/3052965-f8cfc95f95487cc0.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"},{"id":shortuuid.uuid(),"title":"玩转职场，你还差一个项目管理思维","summary":"PMI（美国项目管理协会）发布的第10次薪酬调查报告显示，PMP（项目管理专业人士）证书是影响项目管理专业人士薪酬位数的重要原因。持有PMP证书...","imgUrl":"//upload-images.jianshu.io/upload_images/3052965-f8cfc95f95487cc0.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"}]
+    ret = {
+        "result": 1, 
+        "msg": "获取成功",
+        "data": data
     }
     return make_response(jsonify(ret))
 
