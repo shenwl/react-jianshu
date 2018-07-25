@@ -6,7 +6,7 @@ import {
   LoadMore } from '../style'
 import { connect } from 'react-redux'
 import { actionCreators } from '../store'
-
+import { Link } from 'react-router-dom'
 
 class List extends PureComponent {
   render() {
@@ -15,13 +15,15 @@ class List extends PureComponent {
       <ListWrapper>
         {
           articleList.map(article => (
-            <ListItem key={article.get('id')}>
-              <ListInfo>
-                <h3 className="article-info-title">{article.get('title')}</h3>
-                <p className="article-info-summary">{article.get('summary')}</p>
-              </ListInfo>
-              <img className="article-pic" src={article.get('imgUrl')} alt=''/>
-            </ListItem>
+            <Link to='/detail' key={article.get('id')}>
+              <ListItem >
+                <ListInfo>
+                  <h3 className="article-info-title">{article.get('title')}</h3>
+                  <p className="article-info-summary">{article.get('summary')}</p>
+                </ListInfo>
+                <img className="article-pic" src={article.get('imgUrl')} alt=''/>
+              </ListItem>
+            </Link>
           ))
         }
         <LoadMore onClick={() => getMoreArticleList(articlePage)}>阅读更多</LoadMore>
