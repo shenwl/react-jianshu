@@ -6,11 +6,15 @@ import Writer from './components/Writer'
 import { 
   HomeWrapper,
   HomeLeft, 
-  HomeRight } from './style'
+  HomeRight,
+  GoTop } from './style'
 import { connect } from 'react-redux'
 import { actionCreators } from './store'
 
 class Home extends Component {
+  handleScrollTop() {
+    window.scrollTo(0, 0)
+  }
   render() {
     return (
       <HomeWrapper>
@@ -23,6 +27,7 @@ class Home extends Component {
           <Recommend></Recommend>
           <Writer></Writer>
         </HomeRight>
+        <GoTop onClick={this.handleScrollTop}>^</GoTop>
       </HomeWrapper>
     )
   }

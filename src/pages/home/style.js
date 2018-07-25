@@ -117,3 +117,18 @@ export const LoadMore = styled.div`
   color: #fff;
   cursor: pointer;
 `
+export const GoTop = styled.div`
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 60px;
+  text-align: center;
+  border: 1px solid #ccc;
+  &:hover {
+    background: #eee;
+  }
+`
