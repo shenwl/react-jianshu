@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { 
   ListWrapper,
   ListItem,
@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import { actionCreators } from '../store'
 
 
-class List extends Component {
+class List extends PureComponent {
   render() {
     const { articleList, getMoreArticleList, articlePage } = this.props
     return (
