@@ -35,6 +35,9 @@ injectGlobal `
   blockquote, q {
     quotes: none;
   }
+  a {
+    text-decoration: none;
+  }
   blockquote:before, blockquote:after,
   q:before, q:after {
     content: '';
