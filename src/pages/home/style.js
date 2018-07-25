@@ -13,7 +13,7 @@ export const HomeLeft = styled.div`
   padding-top: 30px;
   .banner-img {
     width: 100%;
-    height: 240px;
+    height: 270px;
   }
 `
 export const HomeRight = styled.div`
@@ -79,15 +79,16 @@ export const ListInfo = styled.div`
   }
 `
 export const RecommendWrapper = styled.div`
+  margin-top: -5px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 280px;
+  height: 270px;
 `
 export const RecommendItem = styled.div`
-  max-width: 280px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   .recommend-pic {
-    width: 280px;
-    height: 50px;
+    width: 100%;
   }
 `
