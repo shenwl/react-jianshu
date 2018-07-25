@@ -35,6 +35,33 @@ const defaultState = fromJS({
       imgUrl: '//upload-images.jianshu.io/upload_images/3052965-f8cfc95f95487cc0.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240',
     },
   ],
+  recommendList: [
+    {
+      id: 1,
+      title: '七日热门',
+      imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png',
+    },
+    {
+      id: 2,
+      title: '30日热门',
+      imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png',
+    },
+    {
+      id: 3,
+      title: '优先连载',
+      imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png'
+    },
+    {
+      id: 4,
+      title: '简书版权',
+      imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png',
+    },
+    {
+      id: 5,
+      title: '简书大学堂',
+      imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png',
+    },
+  ]
 })
 
 export default (state = defaultState, action) => {

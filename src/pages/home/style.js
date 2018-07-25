@@ -78,3 +78,16 @@ export const ListInfo = styled.div`
     color: #999;
   }
 `
+export const RecommendWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`
+export const RecommendItem = styled.div`
+  max-width: 280px;
+  margin-bottom: 10px;
+  .recommend-pic {
+    width: 280px;
+    height: 50px;
+  }
+`
