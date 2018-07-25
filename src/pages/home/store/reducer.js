@@ -39,27 +39,27 @@ const defaultState = fromJS({
     {
       id: 1,
       title: '七日热门',
-      imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png',
+      imgUrl: '//pcertxgzb.bkt.clouddn.com/recommend1.png',
     },
     {
       id: 2,
       title: '30日热门',
-      imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png',
+      imgUrl: '//pcertxgzb.bkt.clouddn.com/recommend2.png',
     },
     {
       id: 3,
       title: '优先连载',
-      imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png'
+      imgUrl: '//pcertxgzb.bkt.clouddn.com/recommend3.png',
     },
     {
       id: 4,
       title: '简书版权',
-      imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png',
+      imgUrl: '//pcertxgzb.bkt.clouddn.com/recommend4.png',
     },
     {
       id: 5,
       title: '简书大学堂',
-      imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png',
+      imgUrl: '//pcertxgzb.bkt.clouddn.com/recommend5.png',
     },
   ]
 })
