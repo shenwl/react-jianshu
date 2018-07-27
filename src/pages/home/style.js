@@ -96,14 +96,23 @@ export const RecommendItem = styled.div`
 export const WriterWrapper = styled.div`
   margin-top: 45px;
   width: 278px;
-  border: 1px solid #dcdcdc;
-  border-radius: 3px;
   height: 300px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 `
 export const WriterItem = styled.div`
   .writer-pic {
     width: 100%;
+  }
+`
+export const WriterHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  span {
+    display: inline-block;
+    font-size: 14px;
+    color: #969696;
   }
 `
 export const LoadMore = styled.div`
