@@ -99,11 +99,44 @@ export const WriterWrapper = styled.div`
   height: 300px;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: column
 `
 export const WriterItem = styled.div`
-  .writer-pic {
-    width: 100%;
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  .follow-button {
+    margin-top: 14px;
+    font-size: 13px;
+    color: #42c02e;
+    .add {
+      font-size: 18px;
+    }
+  }
+`
+export const WriterInfo = styled.div`
+  display: flex;
+  .writer-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px
+  }
+  .info-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    .writer-name {
+      font-size: 14px;
+      padding-top: 6px;
+      margin-left: 5px;
+    }
+    .writer-desc {
+      margin-top: 10px;
+      font-size: 12px;
+      margin-left: 5px;
+      color: #969696;
+      float: left;
+    }
   }
 `
 export const WriterHeader = styled.div`

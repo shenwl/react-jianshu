@@ -8,6 +8,7 @@ const changeHomeData = (result) => {
     topicList: result.topicList,
     articleList: result.articleList,
     recommendList: result.recommendList,
+    writerList: result.writerList,
   }
 }
 
