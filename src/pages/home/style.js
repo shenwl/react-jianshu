@@ -109,8 +109,10 @@ export const WriterItem = styled.div`
     margin-top: 14px;
     font-size: 13px;
     color: #42c02e;
+    cursor: pointer;
     .add {
       font-size: 18px;
+      cursor: pointer;
     }
   }
 `
@@ -119,7 +121,8 @@ export const WriterInfo = styled.div`
   .writer-avatar {
     width: 48px;
     height: 48px;
-    border-radius: 24px
+    border-radius: 24px;
+    cursor: pointer;
   }
   .info-text {
     display: flex;
@@ -129,6 +132,7 @@ export const WriterInfo = styled.div`
       font-size: 14px;
       padding-top: 6px;
       margin-left: 5px;
+      cursor: pointer;
     }
     .writer-desc {
       margin-top: 10px;
