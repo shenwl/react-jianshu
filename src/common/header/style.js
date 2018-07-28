@@ -42,6 +42,7 @@ export const NavItem = styled.div`
   padding: 0 15px;
   font-size: 17px;
   color: #333;
+  cursor: pointer;
 `
 
 export const SearchWrapper = styled.div`
@@ -177,6 +178,7 @@ export const Button = styled.div`
   border-radius: 19px;
   border: 1px solid #ec6149;
   font-size: 14px;
+  cursor: pointer;
   &.reg {
     color: #ec6149;
   }
