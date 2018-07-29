@@ -47,6 +47,16 @@ def get_article_list():
     }
     return make_response(jsonify(ret))
 
+@app.route('/api/detail')
+@allow_cross_domain
+def article_detail():
+    ret = {
+        "id": shortuuid.uuid(),
+        "title": "测试文章",
+        "content": "测试文章",
+    }
+    return make_response(jsonify(ret))
+
 
 if __name__ == "__main__":
     config = dict(
