@@ -37,6 +37,7 @@ injectGlobal `
   }
   a {
     text-decoration: none;
+    color: inherit;
   }
   blockquote:before, blockquote:after,
   q:before, q:after {
