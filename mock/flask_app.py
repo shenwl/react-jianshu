@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, make_response
+from flask import Flask, jsonify, make_response, request
 from functools import wraps
 import json
 import shortuuid
@@ -50,8 +50,9 @@ def get_article_list():
 @app.route('/api/detail')
 @allow_cross_domain
 def article_detail():
+    id = request.args.get('id')
     ret = {
-        "id": shortuuid.uuid(),
+        "id": id,
         "title": "测试文章",
         "content": "测试文章",
     }
