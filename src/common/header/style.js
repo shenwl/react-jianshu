@@ -3,10 +3,11 @@ import logoPic from '../../statics/logo.png';
 
 export const HeaderWrapper = styled.div`
   position: relative;
-  height: 58px;
+  height: 56px;
   border-bottom: 1px solid #f0f0f0;
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 `
 
 export const Logo = styled.div`

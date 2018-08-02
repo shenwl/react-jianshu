@@ -1,12 +1,19 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 // import { actionCreators } from './store'
+import { 
+  LoginLayout,
+  LoginBox } from './style'
 
 class Login extends PureComponent {
   render() {
     const { id, title, content } = this.props
     return (
-      <div>Login</div>
+      <LoginLayout>
+        <LoginBox>
+          Login
+        </LoginBox>
+      </LoginLayout>
     )
   }
 }
