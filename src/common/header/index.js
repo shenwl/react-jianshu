@@ -57,7 +57,7 @@ class Header extends Component {
   }
 
   render() {
-    const { focused, handleInputFocus, handleInputBlur, list, login } = this.props
+    const { focused, handleInputFocus, handleInputBlur, list, loginStatus } = this.props
     return (
       <HeaderWrapper>
         <Link to='/'>
@@ -67,7 +67,7 @@ class Header extends Component {
           <NavItem className='left active'>首页</NavItem>
           <NavItem className='left'>下载App</NavItem>
           {
-            login ? 
+            loginStatus ? 
             <NavItem className='right'>
               退出
             </NavItem> : 
@@ -113,7 +113,7 @@ const mapStateToProps = (state) => {
     page: state.getIn(['header', 'page']),
     totalPage: state.getIn(['header', 'totalPage']),
     mouseIn: state.getIn(['header', 'mouseIn']),
-    login: state.getIn(['login', 'login']),
+    loginStatus: state.getIn(['login', 'loginStatus']),
   }
 }
 

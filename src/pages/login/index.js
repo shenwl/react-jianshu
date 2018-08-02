@@ -10,8 +10,8 @@ import {
 
 class Login extends PureComponent {
   render() {
-    const { login, handleLogin } = this.props
-    if(login) {
+    const { loginStatus, handleLogin } = this.props
+    if(loginStatus) {
       return (
         <Redirect to="/" />
       )
@@ -29,7 +29,7 @@ class Login extends PureComponent {
 }
 
 const mapStateToProps = (state) => ({
-  login: state.getIn(['login', 'login']),
+  loginStatus: state.getIn(['login', 'loginStatus']),
 })
 
 const mapDispatchToProps = (dispatch) => {

@@ -2,13 +2,13 @@ import * as actionTypes from './actionTypes'
 import { fromJS } from 'immutable'
 
 const defaultState = fromJS({
-  login: false,
+  loginStatus: false,
 })
 
 export default (state = defaultState, action) => {
   switch(action.type) {
     case actionTypes.CHANGE_LOGIN:
-      return state.set('login', true)
+      return state.set('loginStatus', true)
     default:
       return state
   }
