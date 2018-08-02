@@ -4,9 +4,8 @@ import { connect } from 'react-redux'
 import { 
   LoginLayout,
   LoginBox,
-  AccountInput,
-  PasswordInput,
-  LoginButton } from './style'
+  Input,
+  Button } from './style'
 
 class Login extends PureComponent {
   render() {
@@ -14,24 +13,22 @@ class Login extends PureComponent {
     return (
       <LoginLayout>
         <LoginBox>
-          <AccountInput></AccountInput>
-          <PasswordInput></PasswordInput>
-          <LoginButton>登录</LoginButton>
+          <Input placeholder="请输入账号" type="text" />
+          <Input placeholder="请输入密码" type="password" />
+          <Button>登录</Button>
         </LoginBox>
       </LoginLayout>
     )
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    
-  }
-}
+const mapStateToProps = null
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    
+    login() {
+
+    },
   }
 }
 

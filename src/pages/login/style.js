@@ -16,25 +16,13 @@ export const LoginBox = styled.div`
   background: #fff;
   box-shadow: 0 0 8px rgba(0, 0, 0, .1);
 `
-export const AccountInput = styled.input.attrs({
-  placeholder: '请输入账号',
-  type: 'text',
-})`
+export const Input = styled.input`
   width: 100%;
   margin: 10px auto;
   padding: 10px;
   border: 1px solid #ccc;
 `
-export const PasswordInput = styled.input.attrs({
-  placeholder: '请输入密码',
-  type: 'password',
-})`
-  width: 100%;
-  margin: 10px auto;
-  padding: 10px;
-  border: 1px solid #ccc;
-`
-export const LoginButton = styled.button`
+export const Button = styled.button`
   width: 100%;
   margin: 30px auto;
   padding: 10px;
