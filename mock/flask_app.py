@@ -58,6 +58,16 @@ def article_detail():
     }
     return make_response(jsonify(ret))
 
+@app.route('/api/login')
+@allow_cross_domain
+def login():
+    account = request.args.get('account')
+    password = request.args.get('password')		
+    ret = {
+        "result": 1,
+        "msg": 'login success',
+    }
+    return make_response(jsonify(ret))
 
 if __name__ == "__main__":
     config = dict(
