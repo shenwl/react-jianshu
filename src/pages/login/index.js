@@ -3,7 +3,10 @@ import { connect } from 'react-redux'
 // import { actionCreators } from './store'
 import { 
   LoginLayout,
-  LoginBox } from './style'
+  LoginBox,
+  AccountInput,
+  PasswordInput,
+  LoginButton } from './style'
 
 class Login extends PureComponent {
   render() {
@@ -11,7 +14,9 @@ class Login extends PureComponent {
     return (
       <LoginLayout>
         <LoginBox>
-          Login
+          <AccountInput></AccountInput>
+          <PasswordInput></PasswordInput>
+          <LoginButton>登录</LoginButton>
         </LoginBox>
       </LoginLayout>
     )
