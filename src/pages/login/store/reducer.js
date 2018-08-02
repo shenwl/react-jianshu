@@ -8,7 +8,7 @@ const defaultState = fromJS({
 export default (state = defaultState, action) => {
   switch(action.type) {
     case actionTypes.CHANGE_LOGIN:
-      return state.set('loginStatus', true)
+      return state.set('loginStatus', action.value)
     default:
       return state
   }

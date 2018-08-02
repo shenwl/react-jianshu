@@ -15,7 +15,9 @@ import {  HeaderWrapper,
 import { CSSTransition } from 'react-transition-group'
 import { connect } from 'react-redux'
 import { actionCreators } from './store'
+import { actionCreators as loginActionCreators } from '../../pages/login/store'
 import { Link } from 'react-router-dom'
+import { LoginLayout } from '../../pages/login/style';
 
 
 class Header extends Component {
@@ -57,7 +59,7 @@ class Header extends Component {
   }
 
   render() {
-    const { focused, handleInputFocus, handleInputBlur, list, loginStatus } = this.props
+    const { focused, handleInputFocus, handleInputBlur, list, loginStatus, logout } = this.props
     return (
       <HeaderWrapper>
         <Link to='/'>
@@ -68,7 +70,7 @@ class Header extends Component {
           <NavItem className='left'>下载App</NavItem>
           {
             loginStatus ? 
-            <NavItem className='right'>
+            <NavItem className='right' onClick={logout}>
               退出
             </NavItem> : 
             <NavItem className='right'>
@@ -145,6 +147,9 @@ const mapDispatchToProps = (dispatch) => {
       }else {
         dispatch(actionCreators.changePage(0))
       }
+    },
+    logout() {
+      dispatch(loginActionCreators.logout())
     },
   }
 }
