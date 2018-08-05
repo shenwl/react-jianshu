@@ -66,7 +66,11 @@ class Header extends Component {
           <Logo/>
         </Link>
         <Nav>
-          <NavItem className='left active'>首页</NavItem>
+          <NavItem className='left active'>
+            <Link to='/'>
+              首页
+            </Link>
+          </NavItem>
           <NavItem className='left'>下载App</NavItem>
           {
             loginStatus ? 
