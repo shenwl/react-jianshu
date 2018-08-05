@@ -17,8 +17,6 @@ import { connect } from 'react-redux'
 import { actionCreators } from './store'
 import { actionCreators as loginActionCreators } from '../../pages/login/store'
 import { Link } from 'react-router-dom'
-import { LoginLayout } from '../../pages/login/style';
-
 
 class Header extends Component {
   getListArea() {
