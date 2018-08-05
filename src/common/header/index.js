@@ -99,7 +99,9 @@ class Header extends Component {
         </Nav>
         <Addition>
           <Button className='writting'>
-            <i className="iconfont">&#xe601;</i>写文章
+            <Link to="/write">
+              <i className="iconfont">&#xe601;</i>写文章
+            </Link>
           </Button>
           <Button className='reg'>注册</Button>
         </Addition>
